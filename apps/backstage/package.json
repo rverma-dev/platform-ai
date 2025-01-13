@@ -22,8 +22,7 @@
     "lint": "backstage-cli repo lint --since origin/master",
     "lint:all": "backstage-cli repo lint",
     "prettier:check": "prettier --check .",
-    "new": "backstage-cli new --scope internal",
-    "knip": "knip"
+    "new": "backstage-cli new --scope internal"
   },
   "resolutions": {
     "@types/react": "^18",
@@ -35,13 +34,9 @@
     "@playwright/test": "^1.32.3",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
-    "eslint": "^8.6.0",
     "fs-extra": "11.2.0",
-    "husky": "^9.0.0",
-    "knip": "^5.0.0",
     "lint-staged": "^15.0.0",
     "node-fetch": "^2.6.7",
-    "prettier": "^3.0.0",
     "typescript": "~5.4.0"
   },
   "prettier": "@backstage/cli/config/prettier",
