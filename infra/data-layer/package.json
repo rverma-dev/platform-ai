@@ -1,0 +1,24 @@
+{
+  "name": "@enterprise/data-infrastructure",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "clean": "rm -rf cdk.out dist"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.118.0",
+    "constructs": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.4",
+    "aws-cdk": "2.118.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  }
+}
