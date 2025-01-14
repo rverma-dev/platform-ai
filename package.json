@@ -6,7 +6,6 @@
     "apps/*",
     "apps/backstage/packages/*",
     "apps/backstage/plugins/*",
-    "packages/*",
     "infra/*"
   ],
   "scripts": {
@@ -24,7 +23,8 @@
     "husky": "^9.0.0",
     "knip": "^5.0.0",
     "prettier": "^3.4.2",
-    "turbo": "^2.3.3"
+    "turbo": "^2.3.3",
+    "typescript": "~5.4.0"
   },
   "engines": {
     "node": ">=18.0.0"
