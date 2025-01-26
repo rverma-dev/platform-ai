@@ -32,7 +32,7 @@
     "@backstage/plugin-permission-common": "^0.8.4",
     "@backstage/plugin-permission-node": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-proxy-backend": "^0.0.0-nightly-20250126023002",
-    "@backstage/plugin-scaffolder-backend": "^0.0.0-nightly-20250126023002",
+    "@backstage/plugin-scaffolder-backend": "^1.15.0",
     "@backstage/plugin-scaffolder-backend-module-github": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-search-backend": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-search-backend-module-catalog": "^0.0.0-nightly-20250126023002",
