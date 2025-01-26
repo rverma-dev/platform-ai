@@ -23,7 +23,7 @@
     "@backstage/plugin-auth-backend-module-github-provider": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-auth-backend-module-guest-provider": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-auth-node": "^0.0.0-nightly-20250126023002",
-    "@backstage/plugin-catalog-backend": "^0.0.0-nightly-20250126023002",
+    "@backstage/plugin-catalog-backend": "^1.26.0",
     "@backstage/plugin-catalog-backend-module-logs": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-catalog-backend-module-scaffolder-entity-model": "^0.0.0-nightly-20250126023002",
     "@backstage/plugin-kubernetes-backend": "^0.0.0-nightly-20250126023002",
