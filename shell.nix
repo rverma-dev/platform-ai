@@ -1,21 +1,24 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}}:
 
 pkgs.mkShell {
-  buildInputs = with pkgs; [
+  packages = with pkgs; [
     nodejs_20
+    nodePackages.npm
     yarn-berry
-    python3
-    go
-    gitAndTools.gh
-    just        # Command runner for development tasks
-  ];
+    nodePackages.typescript
+    nodePackages.typescript-language-server
 
+    python311
+    python311Packages.pip
+    python311Packages.python-lsp-server
+  ];
   shellHook = ''
-    echo "Development environment loaded!"
-    echo "Node.js version: $(node --version)"
-    echo "Yarn version: $(yarn --version)"
-    echo "Python version: $(python3 --version)"
-    echo "Go version: $(go version)"
-    echo "Just version: $(just --version)"
+    echo "Node.js development environment loaded"
+    echo "Node: $(node --version)"
+    echo "NPM: $(npm --version)"
+    echo "Yarn: $(yarn --version)"
+
+    echo "Python development environment loaded"
+    echo "Python: $(python --version)"
   '';
 }

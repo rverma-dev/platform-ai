@@ -1,4 +1,4 @@
-**/dist
-**/dist-types
+dist
+dist-types
 coverage
 .vscode

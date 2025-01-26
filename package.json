@@ -1,38 +1,56 @@
 {
-  "name": "enterprise-monorepo",
+  "name": "root",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "apps/backstage/packages/*",
-    "apps/backstage/plugins/*",
-    "infra/*"
-  ],
+  "engines": {
+    "node": "20 || 22"
+  },
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "test": "turbo run test",
-    "clean": "turbo run clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "knip": "knip"
+    "dev": "yarn workspaces foreach -A --include backend --include app --parallel --jobs unlimited -v -i run start",
+    "start": "yarn workspace app start",
+    "start-backend": "yarn workspace backend start",
+    "build:backend": "yarn workspace backend build",
+    "build:all": "backstage-cli repo build --all",
+    "build-image": "yarn workspace backend build-image",
+    "tsc": "tsc",
+    "tsc:full": "tsc --skipLibCheck false --incremental false",
+    "clean": "backstage-cli repo clean",
+    "test": "backstage-cli repo test",
+    "test:all": "backstage-cli repo test --coverage",
+    "test:e2e": "playwright test",
+    "fix": "backstage-cli repo fix",
+    "lint": "backstage-cli repo lint --since origin/main",
+    "lint:all": "backstage-cli repo lint",
+    "prettier:check": "prettier --check .",
+    "new": "backstage-cli new --scope internal"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "plugins/*"
+    ]
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.11",
-    "eslint": "^8.6.0",
-    "husky": "^9.0.0",
-    "knip": "^5.0.0",
-    "prettier": "^3.4.2",
-    "turbo": "^2.3.3",
+    "@backstage/cli": "^0.0.0-nightly-20250126023002",
+    "@backstage/e2e-test-utils": "^0.1.1",
+    "@playwright/test": "^1.32.3",
+    "node-gyp": "^10.0.0",
+    "prettier": "^2.3.2",
     "typescript": "~5.4.0"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "resolutions": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
   },
-  "packageManager": "yarn@4.6.0",
-  "description": "This monorepo contains three main projects:",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "prettier": "@backstage/cli/config/prettier",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "yarn@4.4.1"
 }
