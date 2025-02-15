@@ -13921,16 +13921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.1.1":
-  version: 20.17.14
-  resolution: "@types/node@npm:20.17.14"
-  dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10/517b8197d833782551bd01431321b83cc03655d7f3836c3e804f8d506eea6cc6f02768c8df078822c9583eeca4f059b7e0fd903e951587e6393bd35af22c37bb
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^20.17.16":
+"@types/node@npm:^20.1.1, @types/node@npm:^20.17.16":
   version: 20.17.16
   resolution: "@types/node@npm:20.17.16"
   dependencies:
@@ -24789,8 +24780,8 @@ __metadata:
   linkType: hard
 
 "knip@npm:^5.43.3":
-  version: 5.43.3
-  resolution: "knip@npm:5.43.3"
+  version: 5.44.1
+  resolution: "knip@npm:5.44.1"
   dependencies:
     "@nodelib/fs.walk": "npm:3.0.1"
     "@snyk/github-codeowners": "npm:1.1.0"
@@ -24814,7 +24805,7 @@ __metadata:
   bin:
     knip: bin/knip.js
     knip-bun: bin/knip-bun.js
-  checksum: 10/57cdeffadfd07d9192f9b97883b9d84661492f7614c856d24b6ad6602c63086e4c35c77239c539d5044a8c91202a0e64953d3782cd9a303b402e8b93310d7f72
+  checksum: 10/d6ecc91c0f0a904ab6f405f21cedd4bca21e6ebe767b377c253ff0acc397c6f93d132297359cb009109e8c6d9c9407fa79ec5bf18e041d029ea9769e8390a1e1
   languageName: node
   linkType: hard
 
