@@ -19,7 +19,7 @@
     "@backstage-community/plugin-badges-backend": "^0.6.0",
     "@backstage-community/plugin-explore-backend": "^0.3.0",
     "@backstage-community/plugin-todo-backend": "^0.4.0",
-    "@backstage/backend-defaults": "^0.7.0",
+    "@backstage/backend-defaults": "^0.12.0",
     "@backstage/backend-plugin-api": "^1.1.1",
     "@backstage/plugin-app-backend": "^0.4.4",
     "@backstage/plugin-auth-backend": "^0.24.2",
